@@ -10,6 +10,7 @@ import AddIcon from "../icons/add.svg";
 import CloseIcon from "../icons/close.svg";
 import MaskIcon from "../icons/mask.svg";
 import PluginIcon from "../icons/plugin.svg";
+import EditIcon from "../icons/edit.svg";
 
 import Locale from "../locales";
 
@@ -118,6 +119,13 @@ export function SideBar(props: { className?: string }) {
           text={shouldNarrow ? undefined : Locale.Plugin.Name}
           className={styles["sidebar-bar-button"]}
           onClick={() => showToast(Locale.WIP)}
+          shadow
+        />
+        <IconButton
+          icon={<EditIcon />}
+          text={shouldNarrow ? undefined : "名片"}
+          className={styles["sidebar-bar-button"]}
+          onClick={() => navigate(Path.BusinessCard)}
           shadow
         />
       </div>
